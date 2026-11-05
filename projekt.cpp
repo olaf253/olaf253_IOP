@@ -6,6 +6,12 @@ int main() {
 	int n;
 
 	cin >> n;
+
+	if (n < 0) {
+		cout << "Ujemna" << endl;
+		return 1;
+	}
+
 	cout << n << endl;
 
 	return 0;
