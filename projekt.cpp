@@ -2,11 +2,33 @@
 
 using namespace std;
 
-int main() {
-	int n;
+bool czy_pierwsza(int n) {
+    if (n < 2) {
+        return false;
+    }
 
-	cin >> n;
-	cout << n << endl;
+    for (int i = 2; i*i <= n; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
 
-	return 0;
+    return true;
 }
+
+int main() {
+    int n;
+
+    cin >> n;
+
+    cout << n << endl;
+
+    if (czy_pierwsza(n)) {
+        cout << "Pierwsza" << endl;
+    } else {
+        cout << "Nie pierwsza" << endl;
+    }
+
+    return 0;
+}
+
