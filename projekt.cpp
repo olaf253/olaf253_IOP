@@ -21,6 +21,11 @@ int main() {
 
     cin >> n;
 
+    if (n < 0) {
+	    cout << "Ujemna" << endl;
+	    return 1;
+    }
+
     cout << n << endl;
 
     if (czy_pierwsza(n)) {
